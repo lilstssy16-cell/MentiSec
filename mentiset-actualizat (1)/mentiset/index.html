@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MentiSec— Găsește psihologul potrivit pentru tine</title>
+  <meta name="description" content="Descoperă psihologi și specialiști în sănătate mintală care te ajută să te simți înțeles și susținut." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Bara de navigare -->
+  <header class="nav-wrap">
+    <nav class="nav" id="nav">
+      <a href="#acasa" class="logo">Menti<span>Sec</span></a>
+      <ul class="nav-links">
+        <li><a href="#acasa">Acasă</a></li>
+        <li><a href="#specialisti">Specialiști</a></li>
+        <li><a href="#despre">Despre noi</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <label class="search desktop-only">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" class="search-input" placeholder="Caută..." aria-label="Caută un psiholog" />
+      </label>
+      <button class="menu-btn" id="menuBtn" aria-label="Deschide meniul" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <label class="search">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" class="search-input" placeholder="Caută..." aria-label="Caută un psiholog" />
+      </label>
+      <ul>
+        <li><a href="#acasa">Acasă</a></li>
+        <li><a href="#specialisti">Specialiști</a></li>
+        <li><a href="#despre">Despre noi</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Secțiunea principală -->
+  <section class="hero" id="acasa">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="hero-inner">
+      <span class="badge reveal">✦ Grijă cu suflet</span>
+      <h1 class="reveal">Cauți sprijin? Suntem aici <span class="accent">pentru tine.</span></h1>
+      <p class="reveal">Indiferent prin ce treci, MentiSec te ajută să găsești sprijinul și îndrumarea de care ai nevoie</p>
+      <div class="hero-actions reveal">
+        <a href="#specialisti" class="btn btn-dark">Găsește un specialist</a>
+        <a href="#despre" class="btn btn-light">Află mai multe</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specialiști -->
+  <section class="section" id="specialisti">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <h2>Cunoaște specialiștii noștri</h2>
+          <p class="muted">Găsește persoana potrivită pentru nevoile tale.</p>
+        </div>
+        <p class="results-info" id="resultsInfo" hidden></p>
+      </div>
+      <div class="grid" id="grid"></div>
+      <div class="empty" id="empty" hidden></div>
+    </div>
+  </section>
+
+  <!-- Despre MentiSec -->
+  <section class="section" id="despre">
+    <div class="container">
+      <div class="cta reveal">
+        <div class="cta-glow"></div>
+        <h2>Cine suntem noi</h2>
+        <p>MentiSec este o platformă pentru persoanele care se confruntă cu un cont spart, fotografii distribuite fără acord, cyberbullying sau alte probleme din mediul online și nu știu unde să ceară ajutor.</p>
+        <p>Descrii situația asistentului nostru AI, care îți oferă o primă orientare și pași clari. Când ai nevoie de ajutor specializat, te îndrumă către un specialist IT, un jurist, un psiholog sau un psihoterapeut, în funcție de problema ta.</p>
+        <p>Scopul nostru este simplu: să știi de unde să începi și să găsești mai ușor ajutorul potrivit.</p>
+        <a href="#specialisti" class="btn btn-dark">Cunoaște specialiștii noștri →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Subsol -->
+  <footer class="footer" id="contact">
+    <div class="container footer-inner">
+      <div>
+        <p class="logo">Menti<span>Sec</span></p>
+        <p class="muted small">Sprijin pentru sănătatea mintală, mai ușor de găsit.</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="#acasa">Acasă</a></li>
+        <li><a href="#specialisti">Specialiști</a></li>
+        <li><a href="#despre">Despre noi</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact">Confidențialitate</a></li>
+      </ul>
+    </div>
+    <p class="container copy">© 2026 MentiSec. Toate drepturile rezervate.</p>
+  </footer>
+
+  <!-- Asistent flotant: rămâne în colțul ecranului la derulare -->
+  <aside class="help-widget" aria-label="Asistent MentiSec">
+    <section class="help-panel" id="helpPanel" aria-labelledby="helpTitle" hidden>
+      <header class="help-header">
+        <span class="help-avatar" aria-hidden="true">✦</span>
+        <div><h2 id="helpTitle">Asistent MentiSec</h2><p id="helpMode">Mod demonstrativ</p></div>
+        <button type="button" class="help-close" id="helpClose" aria-label="Închide conversația">×</button>
+      </header>
+      <p class="help-notice" id="helpNotice">Răspunsuri demonstrative, fără AI conectat. Nu înlocuiește un psiholog.</p>
+      <div class="help-messages" id="helpMessages" role="log" aria-live="polite" aria-relevant="additions" tabindex="0" aria-label="Mesajele conversației"></div>
+      <div class="help-suggestions" aria-label="Întrebări rapide">
+        <button type="button" data-help="Cum aleg un specialist?">Aleg un specialist</button>
+        <button type="button" data-help="Caut un specialist pentru stres">Stres</button>
+        <button type="button" data-help="Cum funcționează site-ul?">Despre MentiSec</button>
+      </div>
+      <form class="help-form" id="helpForm">
+        <label class="help-sr-only" for="helpInput">Mesajul tău</label>
+        <input id="helpInput" type="text" placeholder="Scrie un mesaj…" maxlength="1000" autocomplete="off" required>
+        <button type="submit" id="helpSend" aria-label="Trimite mesajul">➜</button>
+      </form>
+      <p class="help-footnote">Evită datele personale sau medicale sensibile.</p>
+    </section>
+    <button class="help-launcher" type="button" id="helpLauncher" aria-controls="helpPanel" aria-expanded="false">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5H5l-3 2V11.5A8.5 8.5 0 0 1 10.5 3h2a8.5 8.5 0 0 1 8.5 8.5Z"/><path d="M7 11h10M7 15h6"/></svg>
+      <span>Cauți ajutor?</span><span class="help-spark" aria-hidden="true">✦</span>
+    </button>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>

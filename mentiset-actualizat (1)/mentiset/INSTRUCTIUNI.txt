@@ -1,0 +1,27 @@
+MENTISET — CONVERSAȚIE FLOTANTĂ
+
+1. Dezarhivează mentiset.zip.
+2. Înlocuiește index.html, style.css și script.js din proiectul tău cu fișierele noi. Păstrează folderul images.
+3. Deschide index.html în browser sau cu Live Server.
+4. Apasă „Cauți ajutor?” în dreapta jos. Poți scrie un mesaj, apăsa o întrebare rapidă și închide cu × sau Escape. Fereastra rămâne în colț la derulare. Mesajele rămân doar în memoria paginii; reîncărcarea le șterge.
+
+MODUL DEMONSTRATIV
+Fără un server configurat, răspunsurile sunt predefinite, nu generate de AI. Exemple: „Caut un specialist pentru stres”, „Cum aleg un specialist?”, „Cum funcționează site-ul?”.
+
+ACTIVAREA AI REAL — OPȚIONAL
+Serverul server.mjs este inclus. Necesită Node.js 22 sau mai nou și o cheie OpenAI API cu acces și credit pentru modelul configurat.
+Documentație: https://developers.openai.com/api/docs/guides/text
+
+În terminalul PowerShell din VS Code, deschis în folderul mentiset:
+
+$env:OPENAI_API_KEY="cheia-ta-api"
+$env:OPENAI_MODEL="gpt-5"
+node server.mjs
+
+Deschide http://localhost:3000 în browser. În conversație va apărea „AI conectat”. Cheia se introduce doar în terminal, niciodată în index.html sau script.js. Nu trimite cheia în chat și nu publica cheia.
+Modelul poate fi schimbat prin OPENAI_MODEL, dacă acel model este disponibil în contul tău. Solicitările API pot genera costuri. Oprești serverul cu Ctrl+C. În această versiune, serverul ascultă numai pe calculatorul tău; nu publică site-ul pe internet.
+
+În modul AI, mesajele conversației sunt trimise către OpenAI pentru generarea răspunsului. Serverul nu salvează conversațiile în fișiere. Asistentul este destinat orientării prin site, nu diagnosticului sau terapiei. Datele specialiștilor din proiect sunt demonstrative.
+
+VERIFICARE
+Sintaxa JavaScript și serverul au fost verificate local; serviciul AI a fost simulat pentru testarea conexiunii. Verificarea vizuală în browser nu a fost posibilă în mediul de lucru. Conexiunea reală la OpenAI necesită cheia ta API; nu a fost testată cu o cheie reală.
